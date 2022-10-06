@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIUP</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <div class="siup" id="profile-img">
+
+    </div>  
+
+    <section>
+
+        <!-- to initiate siup class and an unique id is required -->
+        <div class="siup" id="profile-img2">
+
+        </div>  
+    </section>
+
+    <script src="script.js"></script>
+    <script>
+        // initiate with an id         
+        const siup = new SIUP('profile-img');
+        const siup2 = new SIUP('profile-img2');
+
+        // re populating (useful in update)
+        siup.populate('https://images.pexels.com/photos/2403538/pexels-photo-2403538.jpeg?cs=srgb&dl=pexels-ranjan-simkhada-2403538.jpg&fm=jpg');
+    </script>
+</body>
+</html>
