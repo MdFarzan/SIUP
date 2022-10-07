@@ -1,6 +1,10 @@
 # SIUP
 Simple Image Upload with Preview, a tiny utility used to show preview before image upload. Unlike others, it uses upload tag.
 
+## Features
+* Simple & easy to use
+* Uses file tag
+* No dependency
 ## Quick Usage
 Include SIUP CSS and JS after downloading the repository. To initiate using:
 
@@ -32,6 +36,7 @@ const img1 = new SIUP('img-1');
 ## Global methods
 It must run before any initiation to apply on tags.
 ```
+<script>
 
 /* To set accept formats */
 SIUP.setAcceptFormats('.jpg,.png');
@@ -44,10 +49,10 @@ SIUP.setPreviewClass('class-1 class-2');
 
 /* To populate upload
  (in case of update where uploaded image is displayed) */
- 
  const img1 = new SIUP('img-1'); // initiate first
  img1.populate(src); // populate it by passing src as image source
 
+</script>
 
 ```
 
