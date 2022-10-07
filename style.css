@@ -9,17 +9,21 @@
     position:relative;
 }
 
+.siup, .siup > *{
+    box-sizing: border-box;
+}
+
 .siup .add-file{
-    width:100px;
-    height:100px;
-    background-color:#f6f6f6;
+    background:#f6f6f6 url('img-placeholder.png') no-repeat center center;
     border-radius:8px;
-    background-image: url('img-placeholder.png');
-    background-repeat: no-repeat;
-    background-position: center center;
     background-size:contain;
     cursor:pointer;
 
+}
+
+.siup .add-file, .siup .preview, .siup input[type=file]{
+    width:120px;
+    height:120px;
 }
 
 .siup .preview{
@@ -27,8 +31,6 @@
     left:0;
     top:0;
     border:1px solid #f5f5f5;
-    width:100px;
-    height:100px;
     border-radius:8px;
     display:none;
     background-repeat: no-repeat;
@@ -41,8 +43,6 @@
     display:block;
 }
 
-
-
 .preview.show-preview::after{
     content:"";
     position:absolute;
@@ -50,11 +50,8 @@
     top:0;
     width:100%;
     height:100%;
-    background-color:rgba(255,0,0,0.4);
-    background-image:url('close-icon.png');
+    background: rgba(255,0,0,0.4) url('close-icon.png') no-repeat center;
     background-size:40px 40px;
-    background-repeat: no-repeat;
-    background-position: center;
     opacity:0;
     transition:300ms;
 }
@@ -65,6 +62,4 @@
 
 .siup input[type=file]{
     opacity:0;
-    width:100px;
-    height:100px;
 }
