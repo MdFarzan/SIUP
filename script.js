@@ -1,6 +1,13 @@
+
+/* 
+    SIUP : Simple image upload with preview
+    A utility to upload with image preview
+    github: https://github.com/MdFarzan/SIUP
+*/
+
 class SIUP{
 
-    // to setup basic thigs
+    // to setup basic things
     static inputClass = '';
     static previewClass = '';
     static acceptFormats = '';
@@ -51,9 +58,6 @@ function SIUPhandleFile(event){
         previewr.classList.add('show-preview');
     }
 
-    else{
-
-    }
 }
 
 
