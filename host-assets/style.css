@@ -1,0 +1,49 @@
+
+body{
+    font-family: 'Poppins', sans-serif
+}
+header a {
+    color: #fff;
+}
+.logo{
+    font-family: 'Comfortaa', cursive;
+    font-size:2em;
+}
+
+header .nav-link{
+    text-transform: uppercase;
+    font-weight: 500;
+    border-bottom:2px solid transparent;
+    transition: 300ms;
+}
+
+header .nav-link:hover{
+    color:#fff;
+    border-bottom:2px solid #fff;
+}
+
+section{
+    padding:60px 10px;
+}
+
+.logo{
+    color:#fff !important;
+}
+
+
+@media (min-width:992px){
+    li.nav-item {
+        margin: 0 15px;
+    }
+
+    h1{
+        font-size: 3em;
+    }
+
+}
+
+@media (max-width:767px){
+    section{
+        padding-bottom:20px;
+    }
+}

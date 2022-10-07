@@ -4,26 +4,82 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SIUP</title>
-    <link rel="stylesheet" href="style.css" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <title>SIUP | Image Upload Utility</title>
+    <!-- FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+
+    <!-- SEO -->
+    <meta name="author" content="Md Farzan" />
+    <meta name="keywords" content="siup, simple image upload, image upload with preview, image upload with upload tag, image upload utility" />
+    <met name="description" content="Simple Image Upload with Preview,
+     a tiny utility used to show preview before image upload. Unlike others, it uses upload tag.
+      There is no need to handle upload on client side with any api just handle it on server." />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css" />    
+    <link rel="stylesheet" href="host-assets/style.css" />
     <style>
         
     </style>
 </head>
 <body>
-    <div class="siup" id="profile-img">
+    <header class="bg-primary">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg">
+                <a class="navbar-brand logo" href="https://mdfarzan.github.io/siup/">SIUP</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"><img src="host-assets/menu-icon.png" class="img-fluid" alt="menu-icon" /></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-md-end" id="navbarNavDropdown">
+                  <ul class="navbar-nav">
+                    <li class="nav-item">
+                      <a class="nav-link" href="https://github.com/MdFarzan/SIUP/tree/main/examples">Examples</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="https://github.com/MdFarzan/SIUP/archive/refs/heads/main.zip">Download</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://github.com/MdFarzan/SIUP">GitHub</a>
+                      </li>
+                  </ul>
+                </div>
+              </nav>
+        </div>
+    </header>
 
-    </div>  
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h1>SIUP </h1> 
+                    <p class="lead mb-3">Simple Image load with preview</p> 
+                    <p>Simple Image Upload with Preview, a tiny utility used to show preview before image upload. Unlike others, it uses upload tag.</p>
+                </div>
+                <div class="col-md-6 text-center mt-5">
+                    <h4>Fresh Example</h4>   
+                        <div class="siup m-auto" id="profile-img" style="width:120px; height:120px;"></div>
+                </div> 
+                <div class="col-md-6 text-center mt-5">
+                    <h4>While Updating</h4>   
+                        <div class="siup m-auto" id="profile-img2" style="width:120px; height:120px;"></div>
+                </div>   
+
+            </div>
+
+        </div>
+    </section>
+    
 
     <section>
 
         <!-- to initiate siup class and an unique id is required -->
-        <div class="siup" id="profile-img2">
-
-        </div>  
+        
     </section>
 
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
     <script src="script.js"></script>
     <script>
         // initiate with an id         
@@ -31,7 +87,7 @@
         const siup2 = new SIUP('profile-img2');
 
         // re populating (useful in update)
-        siup.populate('https://images.pexels.com/photos/2403538/pexels-photo-2403538.jpeg?cs=srgb&dl=pexels-ranjan-simkhada-2403538.jpg&fm=jpg');
+        siup2.populate('https://images.pexels.com/photos/2403538/pexels-photo-2403538.jpeg?cs=srgb&dl=pexels-ranjan-simkhada-2403538.jpg&fm=jpg');
     </script>
 </body>
 </html>
